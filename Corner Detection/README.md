@@ -71,4 +71,3 @@ The main steps involved in this project include:
 
 ---
 
-## 📂 Project Files
