@@ -1,7 +1,6 @@
-** LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)**
 # LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)
 
-📌 Project Overview
+### 📌 Project Overview 
 
 This project implements a handwritten digit classification model using the **LeNet-5 Convolutional Neural Network (CNN)** architecture trained on the **MNIST dataset**.
 
@@ -16,7 +15,7 @@ The model learns important visual patterns from grayscale images and predicts th
 
 ---
 
-🧠 Model Architecture
+### 🧠 Model Architecture
 
 The model is based on the classic **LeNet-5 CNN architecture** developed by Yann LeCun.
 
@@ -32,7 +31,7 @@ These layers help the model extract spatial features from images and perform acc
 
 ---
 
-⚙️ Technologies Used
+### ⚙️ Technologies Used
 
 - Python
 - TensorFlow / Keras
@@ -43,7 +42,7 @@ These layers help the model extract spatial features from images and perform acc
 
 ---
 
-📊 Dataset
+### 📊 Dataset
 
 The model is trained using the **MNIST dataset**, which is a widely used benchmark dataset in machine learning.
 
