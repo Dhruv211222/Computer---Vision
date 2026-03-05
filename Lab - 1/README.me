@@ -1,83 +1,98 @@
-# Feature Detection and Feature Description in Images using OpenCV
+# 🐶🐱 Dog vs Cat Image Classification using VGG16 Transfer Learning
 
 ## 📌 Project Overview
 
-This project demonstrates the implementation of **feature detection and feature description techniques in computer vision** using Python and OpenCV. The objective of this project is to detect important visual features such as edges, corners, and keypoints from different types of images including objects, buildings, and human faces.
+This project implements an image classification system that distinguishes between dogs and cats using Deep Learning and Transfer Learning.
 
-Feature detection plays an important role in many computer vision applications such as **object recognition, image matching, image stitching, face analysis, and visual tracking**. In this project, several images are processed and analyzed to identify distinctive keypoints and visual patterns that help computers understand image structure.
+The model uses the VGG16 pre-trained convolutional neural network from ImageNet as a feature extractor and adds custom classification layers for binary classification.
 
----
+Transfer learning allows us to achieve high accuracy with fewer training samples and less training time compared to training a CNN from scratch.
 
-## 🧠 Feature Detection Concepts
+The system is capable of learning complex visual features such as:
+	•	Fur patterns
+	•	Facial structure
+	•	Ear shapes
+	•	Animal body structure
 
-The project focuses on identifying and describing keypoints in images.
+This project demonstrates practical usage of Computer Vision techniques in real-world image classification tasks.
 
-Key concepts demonstrated in this project include:
+⸻
 
-- **Feature Detection** – Identifying distinctive points in an image.
-- **Keypoint Detection** – Locating important structures such as corners or edges.
-- **Feature Description** – Converting keypoints into numerical feature vectors.
-- **Feature Visualization** – Displaying detected keypoints on images.
+## 🧠 How It Works
 
-These techniques allow computers to recognize patterns and compare images effectively.
+Image Preprocessing
 
----
+Before training the model, all images go through preprocessing:
+	•	Images are resized to 160 × 160 pixels
+	•	Pixel values are normalized between 0 and 1
+	•	Data augmentation is applied to increase dataset diversity
+
+Data augmentation techniques used:
+	•	Rotation
+	•	Horizontal flipping
+	•	Zoom
+	•	Width shift
+	•	Height shift
+
+These techniques help reduce overfitting and improve model generalization.
+
+⸻
+
+Transfer Learning with VGG16
+
+Instead of training a CNN from scratch, we use VGG16, a deep convolutional neural network trained on the ImageNet dataset.
+
+Steps:
+	1.	Load VGG16 without the top classification layer
+	2.	Freeze the base layers to retain learned features
+	3.	Add custom classification layers
+	4.	Train the model on the dog vs cat dataset
+	5.	Fine-tune the last layers of VGG16 for better performance
+
+⸻
 
 ## ⚙️ Technologies Used
+	•	Python
+	•	TensorFlow / Keras
+	•	OpenCV
+	•	NumPy
+	•	Matplotlib
+	•	Jupyter Notebook
 
-- Python  
-- OpenCV  
-- NumPy  
-- Matplotlib  
-- Jupyter Notebook  
+## 🧩 Model Training
 
----
+Training is performed in two phases.
 
-## 🖼 Input Images
+Phase 1 — Feature Extraction
+	•	Freeze all VGG16 layers
+	•	Train only the newly added classification layers
 
-The project uses multiple images to test feature detection techniques:
+Training Configuration
+	•	Epochs: 7
+	•	Optimizer: Adam
+	•	Loss Function: Binary Crossentropy
+	•	Batch Size: 64
 
-- Optical glasses image (object feature detection)
-- Building images (structural feature detection)
-- Human face image (facial feature extraction)
+⸻
 
-Using different image types helps demonstrate how feature detection algorithms perform under different visual conditions.
+Phase 2 — Fine Tuning
 
----
+In the second phase:
+	•	The last 16 layers of VGG16 are unfrozen
+	•	The model is retrained with a lower learning rate
 
-## 🔍 Methodology
+This helps the model adapt better to the dog vs cat dataset.
 
-The workflow used in this project includes the following steps:
+⸻
 
-1. Load input images
-2. Convert images to grayscale
-3. Apply feature detection algorithms
-4. Extract keypoints from images
-5. Generate feature descriptors
-6. Visualize detected keypoints on the original images
+## 📈 Model Performance
 
----
+During training, the following metrics are tracked:
+	•	Training Accuracy
+	•	Validation Accuracy
+	•	Training Loss
+	•	Validation Loss
 
-##  📈 Output Results
+The model achieves high validation accuracy (~90%+) on the validation dataset.
 
-After applying feature detection algorithms, the model produces:
-
-- Keypoints detected in objects
-- Corner and edge detection results
-- Visualization of detected features on buildings and faces
-
-These outputs help demonstrate how computer vision algorithms identify distinctive features that can later be used for tasks like **object recognition, image matching, and scene analysis**.
-
----
-
-## 🎯 Learning Outcomes
-
-Through this project, the following concepts are explored:
-
-- Image feature detection
-- Keypoint extraction techniques
-- Feature descriptors in computer vision
-- Image processing using OpenCV
-- Visualization of computer vision outputs
-
----
+Graphs are plotted to visualize training progress.
