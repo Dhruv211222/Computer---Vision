@@ -1,4 +1,5 @@
-**LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)**
+** LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)**
+# LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)
 
 📌 Project Overview
 
