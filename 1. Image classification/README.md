@@ -1,5 +1,5 @@
-LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)
-
+**LeNet-5 Handwritten Digit Classification using CNN (Keras / PyTorch)
+**
 📌 Project Overview
 
 This project implements a handwritten digit classification model using the **LeNet-5 Convolutional Neural Network (CNN)** architecture trained on the **MNIST dataset**.
